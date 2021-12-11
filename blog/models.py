@@ -1,5 +1,10 @@
 from django.db import models
+<<<<<<< HEAD
 from django.urls import reverse
+=======
+from django.urls import reverse         #forms
+
+>>>>>>> 61efa8e2388f5025baa874c4cafb268c0ed50665
 # Create your models here.
 
 class Post(models.Model):
@@ -8,6 +13,9 @@ class Post(models.Model):
     body = models.TextField()
     def __str__(self):
         return self.title
+<<<<<<< HEAD
     
+=======
+>>>>>>> 61efa8e2388f5025baa874c4cafb268c0ed50665
     def get_absolute_url(self):
         return reverse('post_detail',args=[str(self.id)])

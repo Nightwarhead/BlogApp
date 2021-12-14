@@ -1,5 +1,12 @@
 {% extends 'base.html' %}
 {% block content %}
+    {% if user.is_authenticated %}
+        <p>Hi {{user.username}}!</p>
+        <a href="{% url 'logout' %}"><button>Log Out</button></P></a>
+    {% else %}
+        <p>You are not logged in</p>
+        <P><a href="{% url 'login' %}"><button>Log In</button></P></a>
+    {% endif %}
     {% for items in object_list %}
         <div class="post-entry">
             <h2>
